@@ -11,6 +11,8 @@ venv/
 ENV/
 env/
 
+
+
 # Packaging
 build/
 dist/
@@ -89,6 +91,8 @@ docker-compose.override.yml
 docker-compose.*.local.yml
 
 # === Kubernetes / Helm ===
+kube-prometheus-stack/
+
 values.local.yaml
 values-*.local.yaml
 **/rendered-*.yaml
@@ -107,4 +111,3 @@ pip-wheel-metadata/
 
 */migrations/__pycache__/
 */migrations/*.pyc
-
