@@ -18,10 +18,8 @@ class MetricsMiddleware:
         path = request.path.rstrip('/')
         method = request.method.upper()
 
-        # Рахуємо лише якщо це не системний запит
         if path not in excluded_paths and method in ('GET', 'POST'):
 
-            # Додаємо label 'path', щоб у Grafana бачити, куди саме ходять люди
             http_requests_total.labels(method=method, endpoint=path).inc()
 
         response = self.get_response(request)
